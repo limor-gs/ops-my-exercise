@@ -4,7 +4,7 @@ Requirements:
 1. Docker 17.12.0-ce
 2. Docker-compose 1.18.0
 3. Python 2.7.X
-4. Docker and Docker-compose installed macOS 10.13.5
+4. Docker and Docker-compose installed on macOS 10.13.5
 
 Instructions:
 1. Clone this repo to any location on your machine
