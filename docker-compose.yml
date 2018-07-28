@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "3000:3000"
+    volumes:
+     - /Users/mac/exercise/public/images:/opt/app/public/images
+    restart: always
+    links:
+      - db
+    depends_on:
+      - "db"
+    healthcheck:
+      test: "wget --quiet http://localhost:3000/health || exit 1"
+      interval: 5s
+      retries: 10
+      timeout: 3s
+  db:
+    build: ./db
+    restart: always
+    volumes:
+      - /Users/mac/exercise/public/db:/data/db
